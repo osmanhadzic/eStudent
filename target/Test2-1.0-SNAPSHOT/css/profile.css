@@ -1,0 +1,35 @@
+*{
+    background-color: #e8ded2;
+}
+#conntainer{
+    position: relative;
+    margin: auto;
+    width: 80%;
+    height: 100%;
+    background-color: #a3d2ca;
+}
+#heder{
+    position: absolute;
+    background-color: #5eaaa8;
+    width: 100%;
+    height: 30%;
+}
+#content{
+    position: absolute;
+    height: 70px;
+    width: 100%;
+    top: 250px;
+}
+#aboutMe{
+    position: absolute;
+    width: 30%;
+    height: 100%;
+    background-color: #056676;
+}
+#footer{
+    position: absolute;
+    bottom: 0px;
+    background-color: aliceblue;
+    width: 100%;
+    height: 10%;
+}

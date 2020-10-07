@@ -1,0 +1,61 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+
+    background-color: #fde47f;
+}
+
+
+
+#conntainer{
+    position: relative;
+    height: 1366px;
+    width: 80%;
+    background-color: blue;
+    margin: 0px auto;
+}
+#heder{
+    position: relative;
+}
+#logo_untz{
+    position: absolute;
+    left: 24px;
+    top: 24px;
+}
+#untz{
+    position: absolute;
+    left: 40%;
+    top: 50px;
+    background-color: blue;
+}
+#untz h1{
+    font-family: "Open Sans Condensed";
+}
+#content{
+    position: absolute;
+    width: 100%;
+    height: 80%;
+    background-color: cyan;
+    top: 15%;
+}
+#footer{
+    position: absolute;
+    bottom: 0px;
+    height: 5%;
+    width: 100%;
+}
+#about_autor h1{
+    position: absolute;
+    top: 10px;
+    left: 5px;
+    font-family: "Open Sans";
+    font-size: 16px;
+}
+#about_autor footer{
+    position: absolute;
+    right: 5px;
+    top: 12px;
+}
+

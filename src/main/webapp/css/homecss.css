@@ -1,0 +1,35 @@
+body{
+    margin: auto;
+}
+#conntainer{
+    position: relative;
+    width: 100%;
+}
+#heder{
+    position: absolute;
+    height: 200px;
+    width: 100%;
+    background-color: brown;
+}
+#content{
+    position: absolute;
+    top: 200px;
+    left: 20%;
+    width: 80%;
+    height: 800px;
+    background-color: chartreuse;
+}
+#menu_bar{
+    position: absolute;
+    width: 20%;
+    height: 800px;
+    top: 200px;
+    background-color: aqua;
+}
+#nav{
+    position: absolute;
+    top: 1000px;
+    height: 100px;
+    width: 100%;
+    background-color: deepskyblue;
+}
