@@ -9,19 +9,20 @@ import java.util.Date;
 
 public class App {
     public static void main(String[] args) {
-        User user = new Student();
-        user.setfName("Osman");
-        user.setlName("Hadzic");
-        user.setDateBirth(new Date());
-        user.setDeleted(false);
-        user.setPlaceBirth("Tuzla");
-        user.setNameDad("Mensur");
-        user.setPassword("password1234");
-        user.setLoginName("Osman123");
-        
+
         Transaction transaction = null;
         try(Session session = HibernateUtil.getSessionFactory().openSession()){
             transaction = session.beginTransaction();
+            User user = new Student();
+            user.setfName("Osman");
+            user.setlName("Hadzic");
+
+            user.setDeleted(false);
+            user.setPlaceBirth("Tuzla");
+            user.setNameDad("Mensur");
+            user.setPassword("password1234");
+            user.setLoginName("Osman123");
+
             session.save(user);
             transaction.commit();
             session.close();

@@ -5,7 +5,7 @@ import management.Role;
 import javax.persistence.*;
 import java.io.Serializable;
 import java.util.Date;
-
+@Entity
 @MappedSuperclass
 @Table(name = "User")
 public abstract class User implements Serializable {

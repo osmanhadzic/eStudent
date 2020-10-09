@@ -1,5 +1,6 @@
 package dao;
 
+import models.Admin;
 import models.Student;
 import models.User;
 import org.hibernate.Session;
@@ -18,11 +19,11 @@ public class UserDaoImpl implements UserDao {
        User user = null;
         try(Session session = HibernateUtil.getSessionFactory().openSession()) {
             user = (User) session.createQuery("from User U where U.loginName = :uname").uniqueResult();
-
+            transaction.commit();
+            session.close();
             if(user != null && user.getPassword().equals(passsword)){
                 return user;
             }
-
         }catch (Exception e){
             if (transaction != null) {
                 transaction.rollback();
@@ -53,7 +54,12 @@ public class UserDaoImpl implements UserDao {
     public List<User> getAll() {
         Transaction transaction = null;
         try(Session session = HibernateUtil.getSessionFactory().openSession()){
-
+            transaction = session.beginTransaction();
+            Query query = session.createQuery("from User ");
+            List<User> userList = query.list();
+            transaction.commit();
+            session.close();
+            return userList;
         }catch(Exception ex)
         {
             System.out.println(ex.getMessage());
@@ -92,7 +98,10 @@ public class UserDaoImpl implements UserDao {
     public void delete(User user) {
         Transaction transaction = null;
         try(Session session = HibernateUtil.getSessionFactory().openSession()){
-
+            transaction = session.beginTransaction();
+            session.delete(user);
+            transaction.commit();
+            session.close();
         }catch(Exception ex)
         {
             System.out.println(ex.getMessage());

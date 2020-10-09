@@ -1,8 +1,9 @@
 package dao;
 
 import models.Admin;
+import models.Referent;
 
 public interface AdminDao extends Dao<Admin> {
-    long addNewRefernt(Object ref);
-    long editRefent(Object ref);
+    void addNewRefernt(Referent ref);
+
 }

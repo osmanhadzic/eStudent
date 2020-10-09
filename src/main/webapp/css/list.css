@@ -1,0 +1,10 @@
+#listFak{
+    position: absolute;
+    width: 98%;
+    top:60px;
+    border-style: solid ;
+}
+#listFak select{
+    position: relative;
+
+}

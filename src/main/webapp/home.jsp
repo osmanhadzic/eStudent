@@ -17,7 +17,7 @@
 String sessionID=null;
 User user = (User) request.getSession().getAttribute("user" );
 sessionID = request.getSession().getId();
-if (sessionID==null){
+if (user==null){
     response.sendRedirect("login.jsp");
 }
 %>
@@ -32,8 +32,6 @@ if (sessionID==null){
 
     <div id="content">
         <div id="nav">
-            <%=user.getfName()%>
-            <%=user.getlName()%>
             <div id="listFak">
                 <select name="category">
                     <option value="category_id">name</option>

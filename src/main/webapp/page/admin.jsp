@@ -2,8 +2,9 @@
 <html>
 <head>
     <title>Home</title>
-    <link rel="stylesheet" href="css/index.css">
-    <link rel="stylesheet" href="css/nav_menu.css">
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/nav_menu.css">
+    <link rel="stylesheet" href="../css/list.css">
 </head>
 <body>
 

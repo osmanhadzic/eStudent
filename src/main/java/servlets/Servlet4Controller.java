@@ -21,21 +21,21 @@ public class Servlet4Controller extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
         String param = request.getParameter("page");
-            if (param.equals("login")){
-                response.sendRedirect("/login.jsp");
-            }else if (param.equals("logout")){
-                HttpSession session = request.getSession(false);
-                if(session!=null){
+        switch (param){
+            case "login":{
+                response.sendRedirect("login.jsp");
+                break;
+            }
+            case "logout":{
+                request.getSession().invalidate();
+                response.sendRedirect("login.jsp");
+                break;
+            }
+            default:{
+                response.sendRedirect("index.jsp");
+            }
+        }
 
-                    session.invalidate();
-                    session=null;
-                    System.out.println("delete" + session.getId());
-                }
-                response.sendRedirect("/login.jsp");
-            }
-            else {
-                response.sendRedirect("/login.jsp");
-            }
         }
     }
 
